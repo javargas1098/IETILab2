@@ -38,13 +38,13 @@ export default class App extends Component {
           <br />
 
           <ul>
-            {localStorage.getItem('isLoggedIn') === "true" ?
+            {localStorage.getItem('Logged') === "true" ?
               <li><Link to="/todo">Todo</Link></li> : <li><Link to="/">Login</Link></li>
             }
           </ul>
 
           <div>
-            {localStorage.getItem('isLoggedIn') === "true" ?
+            {localStorage.getItem('Logged') === "true" ?
               < Route path="/todo" component={TodoView} /> : <Route exact path="/" component={LoginView} />
             }
           </div>
